@@ -1,0 +1,12 @@
+class Solution:
+    def maxProfit(self, prices: list[int]) -> int:
+        # Instead of 'max', we use 'max_profit' to avoid overwriting Python's 
+        built-in max() function
+        max_profit = 0
+        
+        # We assume the first day is our starting lowest price
+        min_price = prices[0]
+        
+        # We loop through the list starting from the second day (index 1)
+        for i in range(1, len(prices)):
+            # 1. Calculate potential profit if we sold today
